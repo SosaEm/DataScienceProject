@@ -50,3 +50,7 @@ El proyecto fue desarrollado en Python, utilizando las siguientes herramientas:
 
 Este trabajo se presenta como un prototipo funcional. Debido a los tiempos del marco de investigación original, el análisis se centró en la viabilidad técnica y la competencia de modelos, quedando abierta la puerta para una profundización futura en la precisión clínica.
 
+<img width="854" height="385" alt="imagen" src="https://github.com/user-attachments/assets/afe0a68e-1248-42f6-ac49-2321aae821a6" />
+<img width="1014" height="388" alt="imagen" src="https://github.com/user-attachments/assets/5c16b01d-8e24-4003-89ab-eeeaa0209a09" />
+<img width="510" height="421" alt="imagen" src="https://github.com/user-attachments/assets/6a98f2a4-241b-47ef-8a1a-843397d871ba" />
+
