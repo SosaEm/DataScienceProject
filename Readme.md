@@ -1,55 +1,58 @@
-### **Desafíos Data Science: Análisis de Infecciones Respiratorias (VSR)**
+# RSV Respiratory Infections: Hospital Admission Prediction (Prototype)
 
+End-to-end data science prototype that ingests live clinical data from
+REDCap, cleans it, and compares machine learning models to predict ICU
+admission in children under 5 hospitalized with respiratory illness
+(tested for Respiratory Syncytial Virus, RSV).
 
+> Status: functional prototype / feasibility study. Not a validated clinical tool.
 
-Este repositorio contiene el conjunto de desafíos y trabajos prácticos realizados durante el campus de Data Science, los cuales culminan en el desarrollo del proyecto final: EntregaFinal\_Sosa.ipynb.
+## Context
+Data come from an ongoing multi-center study covering 4 hospitals in
+Buenos Aires (CABA and Greater Buenos Aires). Because the study was still
+running, data were pulled dynamically through the REDCap API so the sample
+stayed up to date.
 
-#### &#x09;
+## What it does
+1. **Ingestion:** connects to the REDCap API (`requests`) and downloads the
+   current records.
+2. **EDA & cleaning:** exploratory analysis and cleaning of clinical data
+   (pandas, ydata-profiling).
+3. **Modeling:** trains and compares [list the models, e.g. logistic
+   regression, random forest, XGBoost] using [validation strategy,
+   e.g. stratified train/test split or cross-validation].
+4. **Evaluation:** [metrics you used, e.g. recall, precision, ROC-AUC].
 
-#### &#x09;Descripción del Proyecto
+## Tech stack
+Python · pandas · NumPy · requests · scikit-learn · XGBoost ·
+statsmodels · matplotlib · seaborn · ydata-profiling
 
-El objetivo principal fue aplicar conocimientos de análisis de datos y Machine Learning a un problema sanitario real: el estudio de ingresos hospitalarios de pacientes menores de 5 años con enfermedades respiratorias, específicamente aquellos testeados para el Virus Sincicial Respiratorio (VSR).
+## Repository structure
+- `Tercer Entrega/` : [one line on what it contains]
+- `EntregaFinal_Sosa.ipynb` : final notebook [confirm path]
+- `requirements.txt`
 
-Los datos fueron recolectados de 4 hospitales estratégicos que cubren la Ciudad Autónoma de Buenos Aires (CABA) y el Gran Buenos Aires (GBA). Dado que el estudio médico estaba en curso al momento del desarrollo, la obtención de datos se realizó de manera dinámica.
+## How to run
+```bash
+pip install -r requirements.txt
+```
+[Explain that the REDCap API token and raw data are not included, and what
+someone needs to run the notebook, e.g. synthetic sample data.]
 
-#### 
+## Data privacy
+Patient records are identified only by non-identifiable IDs. No raw data
+or API credentials are included in this repository.
 
-#### &#x09;Características Principales
+## Limitations & lessons learned
+- Clinician review identified **target leakage** in one feature (mechanical
+  ventilation is only applied to patients already in the ICU), which made
+  early results look better than they were. [Confirm this matches the notebook.]
+- The analysis focused on technical feasibility and model comparison; further
+  work would require redefining features available at admission time and
+  clinical validation.
 
-
-
-Extracción de Datos: Implementación de conexión vía API con la plataforma RedCap para asegurar la actualización constante de la muestra.
-
-EDA \& Limpieza: Análisis exploratorio profundo y saneamiento de datos críticos de salud.
-
-Modelado Predictivo: Desarrollo y comparación de distintos modelos de Machine Learning para identificar el de mejor rendimiento (fase de prototipo).
-
-
-
-#### &#x09;Tecnologías y Librerías
-
-
-
-El proyecto fue desarrollado en Python, utilizando las siguientes herramientas:
-
-
-
-&#x20;   Manipulación de Datos: pandas, numpy, csv.
-
-&#x20;   Extracción (API): requests.
-
-&#x20;   Visualización y Reportes: matplotlib, seaborn, ydata\_profiling, prettytable.
-
-&#x20;   Machine Learning: scikit-learn, xgboost, statsmodels. 
-
-
-
-#### &#x09;Estado del Proyecto
-
-
-
-Este trabajo se presenta como un prototipo funcional. Debido a los tiempos del marco de investigación original, el análisis se centró en la viabilidad técnica y la competencia de modelos, quedando abierta la puerta para una profundización futura en la precisión clínica.
-
+## Author
+Emiliano Martín Sosa · [LinkedIn] · [email]
 <img width="854" height="385" alt="imagen" src="https://github.com/user-attachments/assets/afe0a68e-1248-42f6-ac49-2321aae821a6" />
 <img width="1014" height="388" alt="imagen" src="https://github.com/user-attachments/assets/5c16b01d-8e24-4003-89ab-eeeaa0209a09" />
 <img width="510" height="421" alt="imagen" src="https://github.com/user-attachments/assets/6a98f2a4-241b-47ef-8a1a-843397d871ba" />
